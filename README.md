@@ -52,7 +52,7 @@ https://github.com/BeKind-Rewind/schedule-gator/blob/main/README.md
 
 * Screenshot
 
-![](assets/images/schedule-gator-screenshot.png)
+![](Assets/images/schedule-gator-screenshot.png)
 
 
 ---
