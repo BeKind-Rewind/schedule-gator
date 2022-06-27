@@ -24,34 +24,32 @@ function readyStart() {
     $("#16 .description").val(localStorage.getItem("16"));
     $("#17 .description").val(localStorage.getItem("17"));
 }
-    var hourTracker = function(){
-        // get current hour
-        var currentHour = parseInt(moment().hour());
-        console.log(currentHour, "this is the current hour");
-        // loop over time-blocks and check if class changes (past, present, future)
-        $(".time-block").each(function(){
-            var blockHour = $(this).attr("id");
-            console.log(blockHour, currentHour)
 
-            if (blockHour < currentHour) {
-                $(this).addClass("past");
-                $(this).removeClass("future");
-                $(this).removeClass("present");
+var hourTracker = function(){
+    // get current hour
+    var currentHour = parseInt(moment().hour());
+    console.log(currentHour, "this is the current hour");
+    // loop over time-blocks and check if class changes (past, present, future)
+    $(".time-block").each(function(){
+        var blockHour = $(this).attr("id");
+        console.log(blockHour, currentHour)
 
-            } else if (blockHour == currentHour) {
-                $(this).addClass("present");
-                $(this).removeClass("past");
-                $(this).removeClass("future");
+        if (blockHour < currentHour) {
+            $(this).addClass("past");
+            $(this).removeClass("future");
+            $(this).removeClass("present");
 
-            } else {
-                $(this).removeClass("present");
-                $(this).removeClass("past");
-                $(this).addClass("future");
-            }
-                
-        })
-        
-    }
-       
-setInterval(hourTracker(), 5000);
+        } else if (blockHour == currentHour) {
+            $(this).addClass("present");
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+
+        } else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+        }      
+    })    
+};
 readyStart();
+setInterval(hourTracker(), 5000);

@@ -18,15 +18,14 @@ WHEN I scroll down
 THEN I am presented with timeblocks for standard business hours
 <!-- COMPLETED -->
 
-<!-- TODO -->
+
 WHEN I view the timeblocks for that day
 THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-<!-- PARTIAL -->
+<!-- COMPLETED -->
 
 WHEN I click into a timeblock
 THEN I can enter an event
 <!-- COMPLETED -->
-
 
 WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
